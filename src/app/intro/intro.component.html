@@ -1,0 +1,21 @@
+<label>Full Name</label>
+<input type="text"
+  class="form-control"
+  id="name"
+  [(ngModel)]="nameInput">
+
+<button class="btn btn-primary"
+  id="submit"
+  [disabled]="nameInput.length < 5"
+  (click)="onSubmitFields()"
+  (keyup.enter)="onSubmitFields()">Submit</button>
+
+<div *ngIf="!submitSuccess; else success"
+  class="error">
+  <p>{{ submitResponse }}</p>
+</div>
+<ng-template #success>
+  <div class="output">
+    <p>{{ submitResponse }} </p>
+  </div>
+</ng-template>

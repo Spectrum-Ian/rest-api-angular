@@ -1,0 +1,8 @@
+.output {
+  text-transform: capitalize;
+}
+
+.error {
+  text-transform: uppercase;
+  background-color: mistyrose;
+}
